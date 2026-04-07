@@ -1,0 +1,350 @@
+.projects {
+  padding-top: calc(var(--nav-height) + 100px);
+}
+
+.projectsHeader {
+  margin-bottom: 60px;
+}
+
+/* Filter */
+.filterBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-hover);
+}
+
+.filterBtnActive {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+/* Case Study Cards */
+.caseGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.caseCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.caseCard:hover {
+  border-color: var(--border-hover);
+}
+
+.caseCardInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.caseCardContent {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caseNumber {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.caseCategory {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.caseCardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.caseNarrative {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.narrativeStep {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.narrativeIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.narrativeIcon.problem {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.narrativeIcon.action {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.narrativeIcon.result {
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.narrativeText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-top: 6px;
+}
+
+.narrativeLabel {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.caseResults {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.resultMetric {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultValue {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--success);
+  line-height: 1;
+}
+
+.resultLabel {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Visual Side */
+.caseCardVisual {
+  background: var(--bg-secondary);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+}
+
+/* Pipeline Visualization */
+.pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.pipelineStage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.pipelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg-primary);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.pipelineDot.active {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.pipelineLabel {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  flex: 1;
+}
+
+.pipelineConnector {
+  width: 2px;
+  height: 12px;
+  background: var(--accent);
+  opacity: 0.2;
+  margin-left: 5px;
+}
+
+/* Network Graph Visual */
+.networkGraph {
+  position: relative;
+  width: 100%;
+  height: 260px;
+}
+
+.graphNode {
+  position: absolute;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.graphNode.primary {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.graphEdge {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Topology Visual */
+.topology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.topoLayer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topoNode {
+  padding: 8px 16px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.topoNode.highlight {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.topoConnectors {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.topoLine {
+  width: 2px;
+  height: 24px;
+  background: var(--accent);
+  opacity: 0.2;
+}
+
+.topoLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .caseCardInner {
+    grid-template-columns: 1fr;
+  }
+  .caseCardVisual {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .caseCardContent {
+    padding: 28px;
+  }
+  .caseResults {
+    gap: 16px;
+  }
+  .caseCardVisual {
+    padding: 28px;
+  }
+}
